@@ -1,0 +1,63 @@
+﻿@model CRUDInventoryQuick.Models.PRECIO
+
+@{
+    ViewData["Title"] = "Crear Precio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Agregar Precio</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           @* <div class="form-group">
+                <label asp-for="PrecioId" class="control-label"></label>
+                <input asp-for="PrecioId" class="form-control" />
+                <span asp-validation-for="PrecioId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="FechaIngreso" class="control-label"></label>
+                <input asp-for="FechaIngreso" class="form-control"  />
+                <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioCompra" class="control-label"></label>
+                <input asp-for="PrecioCompra" class="form-control" />
+                <span asp-validation-for="PrecioCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descuento" class="control-label"></label>
+                <input asp-for="Descuento" class="form-control" />
+                <span asp-validation-for="Descuento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioVentaInicial" class="control-label"></label>
+                <input asp-for="PrecioVentaInicial" class="form-control" />
+                <span asp-validation-for="PrecioVentaInicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioVentaFinal" class="control-label"></label>
+                <input asp-for="PrecioVentaFinal" class="form-control" />
+                <span asp-validation-for="PrecioVentaFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO_ProductoId" class="control-label"></label>
+                <select asp-for="PRODUCTO_ProductoId" class ="form-control" asp-items="ViewBag.productos"></select>
+            </div><br >
+
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-sm btn-success"/>
+                <a asp-action="Index" class="btn btn-sm btn-primary">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

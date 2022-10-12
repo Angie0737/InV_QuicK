@@ -1,0 +1,30 @@
+﻿@model CRUDInventoryQuick.Models.CATEGORIum
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-1">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class = "col-sm-11">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt class = "col-sm-1">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-11">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.CategoriaId"  class="btn btn-sm btn-success" >Editar</a> 
+    <a asp-action="Index" class="btn btn-sm btn-primary">Volver a la lista</a>
+</div>
+

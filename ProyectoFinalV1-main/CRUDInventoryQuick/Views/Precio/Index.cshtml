@@ -1,0 +1,73 @@
+﻿@model IEnumerable<CRUDInventoryQuick.Models.PRECIO>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    <a asp-action="Create"  class="btn btn-sm btn-info"><i class="bi bi-bookmark-plus"></i>Agregar Precio</a>
+</p>
+<table id="Tablas" class="table table-hover table-bordered" style="width:100%">
+    <thead class="table-primary">
+
+        <tr>
+            <th width="50">
+                @Html.DisplayNameFor(model => model.PrecioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaIngreso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descuento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioVentaInicial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioVentaFinal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaIngreso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioCompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descuento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioVentaInicial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioVentaFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Nombre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PrecioId" class="btn btn-sm btn-primary"><i class="bi bi-pencil"></i></a> 
+                <a asp-action="Details" asp-route-id="@item.PrecioId"  class="btn btn-sm btn-success"><i class="bi bi-bar-chart"></i></a> 
+                <a asp-action="Delete" asp-route-id="@item.PrecioId"  class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+﻿@model CRUDInventoryQuick.Models.PRODUCTO
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Agregar Producto</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           @* <div class="form-group">
+                <label asp-for="ProductoId" class="control-label"></label>
+                <input asp-for="ProductoId" class="form-control" />
+                <span asp-validation-for="ProductoId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Estado" /> @Html.DisplayNameFor(model => model.Estado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="SUBCATEGORIA_SubcategoriaId" class="control-label"></label>
+                <select asp-for="SUBCATEGORIA_SubcategoriaId" class ="form-control" asp-items="ViewBag.subcategoria"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MARCA_MarcaId" class="control-label"></label>
+                <select asp-for="MARCA_MarcaId" class ="form-control" asp-items="ViewBag.Marca"></select>
+            </div><br>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-sm btn-success" />
+                <a asp-action="Index" class="btn btn-sm btn-primary">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

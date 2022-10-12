@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/InventoryQuick/apis/CRUDInventoryQuick",
+      "type": "apis.azure"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+# <type>(<scope>): <subject>
+# ----------------------------------------------------------
+# Formato del mensaje
+# ----------------------------------------------------------
+# <type>(<scope>): <subject>
+# <línea en blanco>
+# <body>
+# <línea en blanco>
+# <footer>
+# -----------------------TYPE-------------------------------
+# feat: Indica la adición de una nueva funcionalidad
+# fix: Indica la corrección de un bug
+# docs: Indica la adición de documentación
+# style: Indica correcciones en la indentación, eliminación o adición de espacios, etc.
+# refactor: Indica la refactorización de una lógica o función
+# test: Indica la adición de un test faltante
+# chore: Indica mantenimiento del código
+# -----------------------Scoped-------------------------------
+# backend: 
+# frontend:
+# testing
+# 
+# 
+# 
+# 
+# ----------------------------------------------------------
+
+#    Por ejemplo:
+#    - feat(backend): add filter for cars
+#    - fix(web): remove wrong color
+#    - WIP:#123: Nuevo formulario de crear usuario
+#    - END:BUG: Problema con cálculo de hash
+#    - WIP:DOC: Actualizado manual del alumno
+# ----------------------------------------------------------
+
+# ----------------------------------------------------------
+# Info extra (opc)
+# ----------------------------------------------------------
+#    Si la línea anterior no tiene todo lo necesario
+#    o si el id de tarea no existe, ofrecer detalles sobre
+#    - por qué se han hecho los cambios
+#    - detalles importantes sobre cambios
+#    - posible rotura de compatibilidad
+#    - cambios de funcionalidad
+#    - etc...
+# ----------------------------------------------------------
+
+# ----------------------------------------------------------
+# Recursos relacionados - Donde ver información extra (opc)
+# ----------------------------------------------------------
+#    Por ejemplo, urls a documentos internos/externos
+#    sobre técnicas utilizadas, funcionalidad,
+#    casos de uso, docs técnicos, etc..
+# ----------------------------------------------------------
